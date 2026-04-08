@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>IPL 2026 Admin Login</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a2e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #1a1a5e;
+      padding: 40px;
+      border-radius: 16px;
+      width: 380px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+    h1 { color: #FFD700; font-size: 28px; margin-bottom: 8px; }
+    p { color: #aaa; font-size: 13px; margin-bottom: 30px; }
+    .form-group { margin-bottom: 16px; text-align: left; }
+    .form-group label { display: block; color: #aaa; font-size: 13px; margin-bottom: 6px; }
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #0a0a2e;
+      color: white;
+      font-size: 14px;
+    }
+    .form-group input:focus { outline: none; border-color: #FFD700; }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #FFD700;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:hover { background: #ffc107; }
+    .error {
+      background: #b71c1c;
+      color: #ff8a80;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🏏 IPL 2026</h1>
+    <p>Admin Panel — Please login to continue</p>
+
+    <!-- Shows error if wrong credentials -->
+    <div id="errorBox" class="error" style="display:none">
+      ❌ Wrong username or password!
+    </div>
+
+    <form method="POST" action="/login">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Enter username" required autofocus/>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter password" required/>
+      </div>
+      <button class="btn" type="submit">Login →</button>
+    </form>
+  </div>
+
+  <script>
+    // Show error if ?error=1 in URL
+    if (window.location.search.includes('error=1')) {
+      document.getElementById('errorBox').style.display = 'block'
+    }
+  </script>
+</body>
+</html>

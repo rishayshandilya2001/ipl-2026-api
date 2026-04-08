@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPL 2026 Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #0a0a2e; color: white; }
+
+    header {
+      background: linear-gradient(135deg, #1a1a5e, #0d47a1);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 { font-size: 24px; color: #FFD700; }
+    header p { font-size: 13px; color: #aaa; }
+
+    .container { padding: 30px 40px; }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .stat-card {
+      background: #1a1a5e;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+    }
+    .stat-card h2 { font-size: 36px; color: #FFD700; }
+    .stat-card p { font-size: 13px; color: #aaa; margin-top: 5px; }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .toolbar input {
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1a1a5e;
+      color: white;
+      width: 300px;
+      font-size: 14px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .btn-green { background: #28a745; color: white; }
+    .btn-blue { background: #0d47a1; color: white; }
+    .btn-red { background: #dc3545; color: white; font-size: 12px; padding: 6px 12px; }
+    .btn-yellow { background: #FFD700; color: #000; font-size: 12px; padding: 6px 12px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111133;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    thead { background: #0d47a1; }
+    thead th { padding: 14px 12px; text-align: left; font-size: 13px; color: #FFD700; }
+    tbody tr { border-bottom: 1px solid #1a1a5e; transition: background 0.2s; }
+    tbody tr:hover { background: #1a1a5e; }
+    tbody td { padding: 12px; font-size: 13px; }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .badge-played { background: #1b5e20; color: #69f0ae; }
+    .badge-pending { background: #b71c1c; color: #ff8a80; }
+    .badge-update { background: #e65100; color: #ffd180; }
+
+    /* Modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal {
+      background: #1a1a5e;
+      border-radius: 12px;
+      padding: 30px;
+      width: 500px;
+      max-width: 95%;
+    }
+    .modal h2 { color: #FFD700; margin-bottom: 20px; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; font-size: 13px; color: #aaa; margin-bottom: 5px; }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #0a0a2e;
+      color: white;
+      font-size: 14px;
+    }
+    .form-row { display: flex; gap: 10px; }
+    .form-row .form-group { flex: 1; }
+    .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+    .btn-cancel { background: #444; color: white; }
+
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #28a745;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 14px;
+      display: none;
+      z-index: 200;
+    }
+    .toast.show { display: block; }
+    .toast.error { background: #dc3545; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>🏏 IPL 2026 — Admin Panel</h1>
+    <p>Manage all match data. Changes reflect instantly in the API.</p>
+  </div>
+  <div>
+    <a href="/matches" target="_blank">
+      <button class="btn btn-blue">🔗 View API</button>
+    </a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="stats">
+    <div class="stat-card">
+      <h2 id="totalMatches">—</h2>
+      <p>Total Matches</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="totalVenues">—</h2>
+      <p>Venues</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="totalTeams">—</h2>
+      <p>Teams</p>
+    </div>
+    <div class="stat-card">
+      <h2 id="totalPlayed">—</h2>
+      <p>Results Updated</p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input type="text" id="searchInput" placeholder="🔍 Search by team, venue, date..." oninput="renderTable()"/>
+    <button class="btn btn-green" onclick="openModal()">+ Add Match</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Home Team</th>
+        <th>Away Team</th>
+        <th>Venue</th>
+        <th>Result</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <h2 id="modalTitle">Add Match</h2>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Match No</label>
+        <input type="number" id="f_match_no" />
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="text" id="f_date" placeholder="e.g. 28-Mar-26" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Day</label>
+        <input type="text" id="f_day" placeholder="e.g. Sat" />
+      </div>
+      <div class="form-group">
+        <label>Start Time</label>
+        <input type="text" id="f_start_time" placeholder="e.g. 7:30 PM" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Home Team</label>
+      <input type="text" id="f_home_team" />
+    </div>
+    <div class="form-group">
+      <label>Away Team</label>
+      <input type="text" id="f_away_team" />
+    </div>
+    <div class="form-group">
+      <label>Venue</label>
+      <input type="text" id="f_venue" />
+    </div>
+    <div class="form-group">
+      <label>Result</label>
+      <input type="text" id="f_result" placeholder="e.g. Mumbai Indians won by 5 wickets" />
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-green" onclick="saveMatch()">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let allMatches = []
+  let editingMatchNo = null
+
+  async function fetchMatches() {
+    const res = await fetch('/matches')
+    allMatches = await res.json()
+    updateStats()
+    renderTable()
+  }
+
+  function updateStats() {
+    document.getElementById('totalMatches').textContent = allMatches.length
+    const venues = new Set(allMatches.map(m => m.venue))
+    const teams = new Set([...allMatches.map(m => m.home_team), ...allMatches.map(m => m.away_team)])
+    const played = allMatches.filter(m => m.result && m.result !== "Still to be played" && m.result !== "Still to be updated").length
+    document.getElementById('totalVenues').textContent = venues.size
+    document.getElementById('totalTeams').textContent = teams.size
+    document.getElementById('totalPlayed').textContent = played
+  }
+
+  function getBadge(result) {
+    if (!result || result === "Still to be played") 
+      return `<span class="badge badge-pending">🕐 Still to be played</span>`
+    if (result === "Still to be updated") 
+      return `<span class="badge badge-update">⏳ Still to be updated</span>`
+    return `<span class="badge badge-played">🏆 ${result}</span>`
+  }
+
+  function renderTable() {
+    const search = document.getElementById('searchInput').value.toLowerCase()
+    const filtered = allMatches.filter(m =>
+      Object.values(m).some(v => String(v).toLowerCase().includes(search))
+    )
+    const tbody = document.getElementById('tableBody')
+    tbody.innerHTML = filtered.map(m => `
+      <tr>
+        <td>${m.match_no}</td>
+        <td>${m.date}</td>
+        <td>${m.day}</td>
+        <td>${m.start_time}</td>
+        <td>${m.home_team}</td>
+        <td>${m.away_team}</td>
+        <td>${m.venue}</td>
+        <td>${getBadge(m.result)}</td>
+        <td style="display:flex;gap:6px">
+          <button class="btn btn-yellow" onclick="openEdit(${m.match_no})">✏️ Edit</button>
+          <button class="btn btn-red" onclick="deleteMatch(${m.match_no})">🗑️ Delete</button>
+        </td>
+      </tr>
+    `).join('')
+  }
+
+  function openModal() {
+    editingMatchNo = null
+    document.getElementById('modalTitle').textContent = 'Add Match'
+    document.getElementById('f_match_no').value = ''
+    document.getElementById('f_date').value = ''
+    document.getElementById('f_day').value = ''
+    document.getElementById('f_start_time').value = ''
+    document.getElementById('f_home_team').value = ''
+    document.getElementById('f_away_team').value = ''
+    document.getElementById('f_venue').value = ''
+    document.getElementById('f_result').value = ''
+    document.getElementById('modalOverlay').classList.add('active')
+  }
+
+  function openEdit(match_no) {
+    const m = allMatches.find(x => x.match_no === match_no)
+    editingMatchNo = match_no
+    document.getElementById('modalTitle').textContent = 'Edit Match'
+    document.getElementById('f_match_no').value = m.match_no
+    document.getElementById('f_date').value = m.date
+    document.getElementById('f_day').value = m.day
+    document.getElementById('f_start_time').value = m.start_time
+    document.getElementById('f_home_team').value = m.home_team
+    document.getElementById('f_away_team').value = m.away_team
+    document.getElementById('f_venue').value = m.venue
+    document.getElementById('f_result').value = m.result || ''
+    document.getElementById('modalOverlay').classList.add('active')
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('active')
+  }
+
+  async function saveMatch() {
+    const match = {
+      match_no: parseInt(document.getElementById('f_match_no').value),
+      date: document.getElementById('f_date').value,
+      day: document.getElementById('f_day').value,
+      start_time: document.getElementById('f_start_time').value,
+      home_team: document.getElementById('f_home_team').value,
+      away_team: document.getElementById('f_away_team').value,
+      venue: document.getElementById('f_venue').value,
+      result: document.getElementById('f_result').value || 'Still to be played'
+    }
+
+    if (editingMatchNo) {
+      await fetch(`/matches/${editingMatchNo}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(match)
+      })
+      showToast('Match updated!')
+    } else {
+      await fetch('/matches', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(match)
+      })
+      showToast('Match added!')
+    }
+
+    closeModal()
+    fetchMatches()
+  }
+
+  async function deleteMatch(match_no) {
+    if (!confirm(`Delete Match ${match_no}?`)) return
+    await fetch(`/matches/${match_no}`, { method: 'DELETE' })
+    showToast('Match deleted!', true)
+    fetchMatches()
+  }
+
+  function showToast(msg, isError = false) {
+    const t = document.getElementById('toast')
+    t.textContent = msg
+    t.className = 'toast show' + (isError ? ' error' : '')
+    setTimeout(() => t.className = 'toast', 3000)
+  }
+
+  fetchMatches()
+</script>
+</body>
+</html>

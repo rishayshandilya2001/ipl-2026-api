@@ -1,0 +1,633 @@
+[
+  {
+    "match_no": 1,
+    "date": "28-Mar-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "Bengaluru",
+    "result": "Still to be played"
+  },
+  {
+    "match_no": 2,
+    "date": "29-Mar-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 3,
+    "date": "30-Mar-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Chennai Super Kings",
+    "venue": "Guwahati"
+  },
+  {
+    "match_no": 4,
+    "date": "31-Mar-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Gujarat Titans",
+    "venue": "New Chandigarh"
+  },
+  {
+    "match_no": 5,
+    "date": "01-Apr-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Delhi Capitals",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 6,
+    "date": "02-Apr-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "Kolkata"
+  },
+  {
+    "match_no": 7,
+    "date": "03-Apr-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Punjab Kings",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 8,
+    "date": "04-Apr-26",
+    "day": "Sat",
+    "start_time": "3:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Mumbai Indians",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 9,
+    "date": "04-Apr-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Rajasthan Royals",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 10,
+    "date": "05-Apr-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Lucknow Super Giants",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 11,
+    "date": "05-Apr-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Chennai Super Kings",
+    "venue": "Bengaluru"
+  },
+  {
+    "match_no": 12,
+    "date": "06-Apr-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Punjab Kings",
+    "venue": "Kolkata"
+  },
+  {
+    "match_no": 13,
+    "date": "07-Apr-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Mumbai Indians",
+    "venue": "Guwahati"
+  },
+  {
+    "match_no": 14,
+    "date": "08-Apr-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Gujarat Titans",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 15,
+    "date": "09-Apr-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Lucknow Super Giants",
+    "venue": "Kolkata"
+  },
+  {
+    "match_no": 16,
+    "date": "10-Apr-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Guwahati"
+  },
+  {
+    "match_no": 17,
+    "date": "11-Apr-26",
+    "day": "Sat",
+    "start_time": "3:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "New Chandigarh"
+  },
+  {
+    "match_no": 18,
+    "date": "11-Apr-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Delhi Capitals",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 19,
+    "date": "12-Apr-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Gujarat Titans",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 20,
+    "date": "12-Apr-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 21,
+    "date": "13-Apr-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Rajasthan Royals",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 22,
+    "date": "14-Apr-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 23,
+    "date": "15-Apr-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Lucknow Super Giants",
+    "venue": "Bengaluru"
+  },
+  {
+    "match_no": 24,
+    "date": "16-Apr-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Punjab Kings",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 25,
+    "date": "17-Apr-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 26,
+    "date": "18-Apr-26",
+    "day": "Sat",
+    "start_time": "3:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Delhi Capitals",
+    "venue": "Bengaluru"
+  },
+  {
+    "match_no": 27,
+    "date": "18-Apr-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Chennai Super Kings",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 28,
+    "date": "19-Apr-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Rajasthan Royals",
+    "venue": "Kolkata"
+  },
+  {
+    "match_no": 29,
+    "date": "19-Apr-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Lucknow Super Giants",
+    "venue": "New Chandigarh"
+  },
+  {
+    "match_no": 30,
+    "date": "20-Apr-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Mumbai Indians",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 31,
+    "date": "21-Apr-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Delhi Capitals",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 32,
+    "date": "22-Apr-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Rajasthan Royals",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 33,
+    "date": "23-Apr-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Chennai Super Kings",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 34,
+    "date": "24-Apr-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Gujarat Titans",
+    "venue": "Bengaluru"
+  },
+  {
+    "match_no": 35,
+    "date": "25-Apr-26",
+    "day": "Sat",
+    "start_time": "3:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Punjab Kings",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 36,
+    "date": "25-Apr-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "Jaipur"
+  },
+  {
+    "match_no": 37,
+    "date": "26-Apr-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Chennai Super Kings",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 38,
+    "date": "26-Apr-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 39,
+    "date": "27-Apr-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 40,
+    "date": "28-Apr-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Rajasthan Royals",
+    "venue": "New Chandigarh"
+  },
+  {
+    "match_no": 41,
+    "date": "29-Apr-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 42,
+    "date": "30-Apr-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 43,
+    "date": "01-May-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Delhi Capitals",
+    "venue": "Jaipur"
+  },
+  {
+    "match_no": 44,
+    "date": "02-May-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Mumbai Indians",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 45,
+    "date": "03-May-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 46,
+    "date": "03-May-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Punjab Kings",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 47,
+    "date": "04-May-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Lucknow Super Giants",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 48,
+    "date": "05-May-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Chennai Super Kings",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 49,
+    "date": "06-May-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Punjab Kings",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 50,
+    "date": "07-May-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 51,
+    "date": "08-May-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 52,
+    "date": "09-May-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Gujarat Titans",
+    "venue": "Jaipur"
+  },
+  {
+    "match_no": 53,
+    "date": "10-May-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Lucknow Super Giants",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 54,
+    "date": "10-May-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Mumbai Indians",
+    "venue": "Raipur"
+  },
+  {
+    "match_no": 55,
+    "date": "11-May-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Delhi Capitals",
+    "venue": "Dharamshala"
+  },
+  {
+    "match_no": 56,
+    "date": "12-May-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Gujarat Titans",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "Ahmedabad"
+  },
+  {
+    "match_no": 57,
+    "date": "13-May-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Royal Challengers Bengaluru",
+    "away_team": "Kolkata Knight Riders",
+    "venue": "Raipur"
+  },
+  {
+    "match_no": 58,
+    "date": "14-May-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Mumbai Indians",
+    "venue": "Dharamshala"
+  },
+  {
+    "match_no": 59,
+    "date": "15-May-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Chennai Super Kings",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 60,
+    "date": "16-May-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Gujarat Titans",
+    "venue": "Kolkata"
+  },
+  {
+    "match_no": 61,
+    "date": "17-May-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Punjab Kings",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Dharamshala"
+  },
+  {
+    "match_no": 62,
+    "date": "17-May-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Delhi Capitals",
+    "away_team": "Rajasthan Royals",
+    "venue": "Delhi"
+  },
+  {
+    "match_no": 63,
+    "date": "18-May-26",
+    "day": "Mon",
+    "start_time": "7:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Sunrisers Hyderabad",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 64,
+    "date": "19-May-26",
+    "day": "Tue",
+    "start_time": "7:30 PM",
+    "home_team": "Rajasthan Royals",
+    "away_team": "Lucknow Super Giants",
+    "venue": "Jaipur"
+  },
+  {
+    "match_no": 65,
+    "date": "20-May-26",
+    "day": "Wed",
+    "start_time": "7:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Mumbai Indians",
+    "venue": "Kolkata"
+  },
+  {
+    "match_no": 66,
+    "date": "21-May-26",
+    "day": "Thu",
+    "start_time": "7:30 PM",
+    "home_team": "Chennai Super Kings",
+    "away_team": "Gujarat Titans",
+    "venue": "Chennai"
+  },
+  {
+    "match_no": 67,
+    "date": "22-May-26",
+    "day": "Fri",
+    "start_time": "7:30 PM",
+    "home_team": "Sunrisers Hyderabad",
+    "away_team": "Royal Challengers Bengaluru",
+    "venue": "Hyderabad"
+  },
+  {
+    "match_no": 68,
+    "date": "23-May-26",
+    "day": "Sat",
+    "start_time": "7:30 PM",
+    "home_team": "Lucknow Super Giants",
+    "away_team": "Punjab Kings",
+    "venue": "Lucknow"
+  },
+  {
+    "match_no": 69,
+    "date": "24-May-26",
+    "day": "Sun",
+    "start_time": "3:30 PM",
+    "home_team": "Mumbai Indians",
+    "away_team": "Rajasthan Royals",
+    "venue": "Mumbai"
+  },
+  {
+    "match_no": 70,
+    "date": "24-May-26",
+    "day": "Sun",
+    "start_time": "7:30 PM",
+    "home_team": "Kolkata Knight Riders",
+    "away_team": "Delhi Capitals",
+    "venue": "Kolkata"
+  }
+]
